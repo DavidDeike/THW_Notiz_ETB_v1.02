@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="nav"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/menueFragment"
+        android:name="com.example.thwnotizetb.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_menueFragment_to_notizEtbFragment"
+            app:destination="@id/notizEtbFragment" />
+        <action
+            android:id="@+id/action_menueFragment_to_linkFragment2"
+            app:destination="@id/linkFragment" />
+        <action
+            android:id="@+id/action_menueFragment_to_serviceFragment2"
+            app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_menueFragment_to_tresorFragment"
+            app:destination="@id/tresorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notizEtbFragment"
+        android:name="com.example.thwnotizetb.NotizEtbFragment"
+        android:label="ETB / Notiz">
+        <action
+            android:id="@+id/action_notizEtbFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.thwnotizetb.ui.login.LoginFragment2"
+        android:label="Log-In"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment22_to_menueFragment"
+            app:destination="@id/menueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.thwnotizetb.StartFragment"
+        android:label="Start">
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment22"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <include app:graph="@navigation/notepad_navigation" />
+    <fragment
+        android:id="@+id/linkFragment"
+        android:name="com.example.thwnotizetb.LinkFragment"
+        android:label="fragment_link"
+        tools:layout="@layout/fragment_link" />
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.example.thwnotizetb.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/tresorFragment"
+        android:name="com.example.thwnotizetb.TresorFragment"
+        android:label="fragment_tresor"
+        tools:layout="@layout/fragment_tresor" />
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.example.thwnotizetb.CalenderFragment"
+        android:label="fragment_calender"
+        tools:layout="@layout/fragment_calender" />
+</navigation>
