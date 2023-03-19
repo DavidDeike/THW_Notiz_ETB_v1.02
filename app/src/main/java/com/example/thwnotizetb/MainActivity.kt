@@ -1,42 +1,43 @@
 package com.example.thwnotizetb
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+   /* override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)*/
     }
-}
 
-   /* private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    //private lateinit var appBarConfiguration: AppBarConfiguration
+    //private lateinit var binding: ActivityMainBinding
+
+
+
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.activity_main)
-       // setupNavigation()
+       // setupNavigation()*/
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+      // binding = ActivityMainBinding.inflate(layoutInflater)
+       // setContentView(binding.root)
 
        //setSupportActionBar(binding.toolbar)
 
-        val navController : NavController = findNavController(R.id.nav_graph)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-    }
+       // val navController : NavController = findNavController(R.id.nav_graph)
+       // appBarConfiguration = AppBarConfiguration(navController.graph)
+       // setupActionBarWithNavController(navController, appBarConfiguration)
+    //}
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+   // override fun onCreateOptionsMenu(menu: Menu): Boolean {
+   //     menuInflater.inflate(R.menu.menu_main, menu)
+   //     return true
+   // }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_etb -> true
             R.id.action_datapicker -> true
@@ -48,5 +49,5 @@ class MainActivity : AppCompatActivity() {
             R.id.action_notiz -> true
             R.id.action_tresor -> true
             else -> super.onOptionsItemSelected(item)
-        }
-    }*/
+        }*/
+   // }

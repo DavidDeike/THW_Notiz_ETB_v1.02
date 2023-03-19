@@ -33,6 +33,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="156dp"
             android:backgroundTint="@color/Gelb"
+            android:onClick="true"
             android:text="@string/Terminhinzufügen"
             android:textColor="@color/Ultramarinblau"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:strokeColor="@color/black"
             app:strokeWidth="1dp"
-            tools:ignore="VisualLintButtonSize" />
+            tools:ignore="OnClick,VisualLintButtonSize" />
 
         <EditText
             android:id="@+id/etTermin"
