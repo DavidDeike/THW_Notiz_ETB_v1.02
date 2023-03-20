@@ -23,10 +23,8 @@
             tools:ignore="RedundantLabel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.INSERT" />
-                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <data android:mimeType="vnd.android.cursor.dir/event" />
+
             </intent-filter>
         </activity>
         <meta-data

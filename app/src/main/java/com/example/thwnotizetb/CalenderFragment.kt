@@ -29,33 +29,7 @@ class CalenderFragment : Fragment() {
         return binding.root
     }
 
-/*
-    val cal = Calendar.getInstance()
 
-    val title = binding.etTermin
-    val beschreibung = binding.etBeschreibung
-    val ort = binding.etOrt
-
-    val hinzufuegen = binding.addBt
-
-    .setOnClickListener {
-        addEvent(title.text.toString(), ort.text.toString(), beschreibung.text.toString(), cal.timeInMillis, cal.timeInMillis + 1800000);
-    }
-
-}
-
-fun addEvent(title: String, location: String, description: String, begin: Long, end: Long) {
-
-    val intent = Intent(Intent.ACTION_INSERT)
-
-
-        .putExtra(CalendarContract.Events.TITLE, title)
-        .putExtra(CalendarContract.Events.EVENT_LOCATION, location)
-        .putExtra(CalendarContract.Events.DESCRIPTION, description)
-        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, begin)
-        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, end)
-        .setDataAndType(CalendarContract.Events.CONTENT_URI,"vnd.android.cursor.dir/event" )
-    */
     //Kalender ID abrufen
    private fun getCalender(context: Context): Long {
 
