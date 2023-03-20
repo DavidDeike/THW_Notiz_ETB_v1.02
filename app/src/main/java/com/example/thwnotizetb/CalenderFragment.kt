@@ -81,20 +81,19 @@ fun addEvent(title: String, location: String, description: String, begin: Long, 
             var eventLocation = binding.etOrt
 
 
-            fun addEvent(toString: String, toString1: String, toString2: String) {
+              fun addEvent(toString: String, toString1: String, toString2: String) {
 
-            }
-            fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-                super.onViewCreated(view, savedInstanceState)
-                binding.addBt.setOnClickListener {addEvent(
+              }
+                    fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+                     super.onViewCreated(view, savedInstanceState)
+                    binding.addBt.setOnClickListener {addEvent(
                         title.text.toString(),
                         eventLocation.text.toString(),
                         description.text.toString(),
                        // timeStart.startDate.timeInMillis,
                        // timeEnd.endDate.timeInMillis + 1800000
-                )
-                }
-            }
+                    ) }
+                    }
                     val values = ContentValues().apply {
                         //put(CalendarContract.Events.DTSTART, timeStart)
                         //put(CalendarContract.Events.DTEND, timeEnd)
