@@ -8,11 +8,10 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/reinwhite"
-        tools:context=".CalenderFragment">
+        android:background="@color/reinwhite">
 
         <ImageView
             android:id="@+id/wlogo_iv"
@@ -27,12 +26,13 @@
 
         <Button
             android:id="@+id/add_bt"
-            android:layout_width="0dp"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="156dp"
             android:backgroundTint="@color/Gelb"
+            android:fontFamily="@font/open_sans_bold"
             android:onClick="true"
             android:text="@string/Terminhinzufügen"
             android:textColor="@color/Ultramarinblau"
@@ -41,16 +41,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:strokeColor="@color/black"
             app:strokeWidth="1dp"
-            tools:ignore="OnClick,VisualLintButtonSize" />
+            tools:ignore="OnClick,VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
         <EditText
             android:id="@+id/etTermin"
-            android:layout_width="0dp"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="2dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
             android:ems="10"
+            android:fontFamily="@font/open_sans_semibold"
             android:hint="@string/Terminhinzufügen"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -59,7 +61,6 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/wlogo_iv"
-            android:autofillHints=""
             tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
@@ -67,7 +68,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:autofillHints=""
             android:ems="10"
+            android:fontFamily="@font/open_sans_semibold"
             android:hint="@string/ort"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -76,14 +79,15 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/etTermin"
             app:layout_constraintTop_toBottomOf="@+id/etTermin"
-            android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize" />
+            tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
         <EditText
             android:id="@+id/etBeschreibung"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
+            android:fontFamily="@font/open_sans_semibold"
             android:hint="@string/Beschreibung2"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -94,8 +98,7 @@
             app:layout_constraintStart_toStartOf="@+id/etOrt"
             app:layout_constraintTop_toBottomOf="@+id/etOrt"
             app:layout_constraintVertical_bias="1.0"
-            android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize" />
+            tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

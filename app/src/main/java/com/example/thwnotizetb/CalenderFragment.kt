@@ -47,38 +47,38 @@ class CalenderFragment : Fragment() {
    }
 
         //Erstellen von Termin im Gerätekalender mit der Kalender-ID und Termindetails
-    fun createEvent(context: Context, event: Event) {
-           // var timeStart = startDate
-          //  var timeEnd = endDate
+  /*  fun createEvent(context: Context, event: Event) {
+            // var timeStart = startDate
+            //  var timeEnd = endDate
             var title = binding.etTermin
             var description = binding.etBeschreibung
             var eventLocation = binding.etOrt
 
-
+    }
               fun addEvent(toString: String, toString1: String, toString2: String) {
 
               }
-                    fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-                     super.onViewCreated(view, savedInstanceState)
-                    binding.addBt.setOnClickListener {addEvent(
-                        title.text.toString(),
-                        eventLocation.text.toString(),
-                        description.text.toString(),
-                       // timeStart.startDate.timeInMillis,
-                       // timeEnd.endDate.timeInMillis + 1800000
-                    ) }
-                    }
-                    val values = ContentValues().apply {
-                        //put(CalendarContract.Events.DTSTART, timeStart)
-                        //put(CalendarContract.Events.DTEND, timeEnd)
-                        put(CalendarContract.Events.TITLE, "title")
-                        put(CalendarContract.Events.EVENT_LOCATION, "eventLocation")
-                        put(CalendarContract.Events.DESCRIPTION, "description")
-                        put(CalendarContract.Events.CALENDAR_ID, "calender_id")
-                        put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().id)
-                    }
-                    context.contentResolver.insert(CalendarContract.Events.CONTENT_URI, values)
+            fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+                super.onViewCreated(view, savedInstanceState)
+                binding.addBt.setOnClickListener {addEvent(
+                    title.text.toString(),
+                    eventLocation.text.toString(),
+                    description.text.toString(),
+                    // timeStart.startDate.timeInMillis,
+                    // timeEnd.endDate.timeInMillis + 1800000
+                ) }
             }
+            val values = ContentValues().apply {
+                //put(CalendarContract.Events.DTSTART, timeStart)
+                //put(CalendarContract.Events.DTEND, timeEnd)
+                put(CalendarContract.Events.TITLE, "title")
+                put(CalendarContract.Events.EVENT_LOCATION, "eventLocation")
+                put(CalendarContract.Events.DESCRIPTION, "description")
+                put(CalendarContract.Events.CALENDAR_ID, "calender_id")
+                put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().id)
+            }
+            context.contentResolver.insert(CalendarContract.Events.CONTENT_URI, values)*/
+
     }
 
 

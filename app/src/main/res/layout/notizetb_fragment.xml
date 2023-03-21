@@ -43,18 +43,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_thw_blau_1" />
+            app:srcCompat="@drawable/logo_thw_blau_1"
+            tools:ignore="ContentDescription,RtlHardcoded" />
 
         <Button
             android:id="@+id/etb_bt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
             android:layout_marginTop="249dp"
             android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:fontFamily="@font/lubalin2"
+            android:fontFamily="@font/open_sans_bold"
             android:text="Einsatztagebuch"
             android:textColor="#003399"
             android:textSize="20sp"
@@ -65,18 +64,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="#000000"
             app:strokeWidth="1dp"
-            tools:ignore="VisualLintButtonSize" />
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
 
         <Button
             android:id="@+id/notiz_bt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
             android:layout_marginTop="240dp"
             android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:fontFamily="@font/lubalin2"
+            android:fontFamily="@font/open_sans_bold"
             android:text="Notiz"
             android:textColor="#003399"
             android:textSize="20sp"
@@ -89,7 +86,7 @@
             app:layout_constraintVertical_bias="0.005"
             app:strokeColor="#000000"
             app:strokeWidth="1dp"
-            tools:ignore="VisualLintButtonSize" />
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

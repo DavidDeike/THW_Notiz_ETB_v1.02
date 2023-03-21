@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/menueFragment"
-        android:name="com.example.thwnotizetb.HomeFragment"
+        android:name="com.example.thwnotizetb.ui.thw.HomeFragment"
         android:label="Home">
         <action
             android:id="@+id/action_menueFragment_to_notizEtbFragment"
@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_menueFragment_to_tresorFragment"
             app:destination="@id/tresorFragment" />
+        <action
+            android:id="@+id/action_menueFragment_to_calenderFragment"
+            app:destination="@id/calenderFragment" />
     </fragment>
     <fragment
         android:id="@+id/notizEtbFragment"

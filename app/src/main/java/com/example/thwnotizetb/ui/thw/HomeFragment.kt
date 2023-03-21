@@ -1,4 +1,4 @@
-package com.example.thwnotizetb
+package com.example.thwnotizetb.ui.thw
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.thwnotizetb.R
 import com.example.thwnotizetb.databinding.MenueFragmentBinding
 
 
@@ -32,7 +33,7 @@ class HomeFragment : Fragment() {
              findNavController().navigate(R.id.notizEtbFragment)
         }
         binding.kalenderBt.setOnClickListener {
-            // findNavController().navigate(R.id.action_)
+             findNavController().navigate(R.id.action_menueFragment_to_calenderFragment)
         }
         binding.dASBt.setOnClickListener {
             // findNavController().navigate(R.id.action_)
