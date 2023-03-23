@@ -44,4 +44,11 @@
     <string name="Beschreibung">beschreibung</string>
     <string name="Beschreibung2">Beschreibung</string>
     <string name="Terminhinzufügen">Termin Hinzufügen</string>
+    <string name="item">Item</string>
+    <string name="nP_tv">neues Passwort</string>
+    <string name="lP_tv">"Passwort entfernen "</string>
+    <string name="hinzuf_gen">Hinzufügen</string>
+    <string name="entfernen">Entfernen</string>
+    <string name="nummer">Nummer</string>
+    <string name="passwort">Passwort</string>
 </resources>
