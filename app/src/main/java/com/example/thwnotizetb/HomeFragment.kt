@@ -1,4 +1,4 @@
-package com.example.thwnotizetb.ui.thw
+package com.example.thwnotizetb
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.thwnotizetb.R
 import com.example.thwnotizetb.databinding.MenueFragmentBinding
 
 
@@ -45,7 +44,7 @@ class HomeFragment : Fragment() {
              findNavController().navigate(R.id.linkFragment)
         }
         binding.serviceBt.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionMenueFragmentToServiceFragment())
+            findNavController().navigate(R.id.serviceFragment)
         }
     }
 

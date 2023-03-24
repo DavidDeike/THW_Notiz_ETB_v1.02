@@ -14,13 +14,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notesRecyclerView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -50,18 +45,38 @@
             app:srcCompat="@drawable/thw20"
             tools:ignore="ContentDescription" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_bt"
+        <Button
+            android:id="@+id/nlBearbeit_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:backgroundTint="#FFFF00"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/Gelb"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Bearbeiten"
+            android:textColor="@color/Ultramarinblau"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nlHinzu_bt"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/nlHinzu_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/Gelb"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/hinzuf"
+            android:textColor="@color/Ultramarinblau"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nlBearbeit_bt"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@android:drawable/ic_input_add"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

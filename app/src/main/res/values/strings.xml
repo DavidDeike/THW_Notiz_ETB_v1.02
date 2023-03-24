@@ -125,4 +125,7 @@
     <string name="entfernen">Entfernen</string>
     <string name="nummer">Nummer</string>
     <string name="passwort">Passwort</string>
+    <string name="button">Button</string>
+    <string name="hinzuf">Hinzufügen</string>
+    <string name="hallo_ich_bin_dein_notizhelfer">Hallo ich bin dein Notizhelfer</string>
 </resources>

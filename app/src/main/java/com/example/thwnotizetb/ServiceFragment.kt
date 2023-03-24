@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.thwnotizetb.databinding.FragmentServiceBinding
 
-
 class ServiceFragment : Fragment() {
 
     private var _binding: FragmentServiceBinding? = null
@@ -21,11 +20,6 @@ class ServiceFragment : Fragment() {
 
         _binding = FragmentServiceBinding.inflate(inflater, container, false)
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
 

@@ -17,10 +17,6 @@
             app:argType="integer" />
 
         <action
-            android:id="@+id/action_noteDetail_to_editNote"
-            app:destination="@id/editNoteFragment" />
-
-        <action
             android:id="@+id/action_noteDetail_to_deleteNote"
             app:destination="@id/deleteNoteFragment" />
 
@@ -45,23 +41,13 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/editNoteFragment"
-        android:name="com.example.thwnotizetb.data.ui.notepad.EditNoteFragment"
-        android:label="@string/label_edit_note"
-        tools:layout="@layout/edit_note_fragment">
-
-        <argument
-            android:name="noteId"
-            app:argType="integer" />
-    </fragment>
-    <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.thwnotizetb.data.ui.notepad.SearchFragment"
         android:label="@string/label_search_notes"
         tools:layout="@layout/search_fragment" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.thwnotizetb.ui.thw.HomeFragment"
+        android:name="com.example.thwnotizetb.HomeFragment"
         android:label="Home"
         tools:layout="@layout/menue_fragment">
         <action

@@ -22,7 +22,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ItemViewHolder>() {
         val thwLogo1 : ImageView = view.findViewById(R.id.blogo_iv)
         val id : TextView = view.findViewById(R.id.noteId_tv)
         val text : TextView = view.findViewById(R.id.notetext_tv)
-        val fabButton : Button = view.findViewById(R.id.fab_bt)
+        val fabButton : Button = view.findViewById(R.id.nlHinzu_bt)
     }
 
     @SuppressLint("NotifyDataSetChanged")

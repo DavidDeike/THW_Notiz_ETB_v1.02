@@ -29,7 +29,7 @@ class EventAdapter {
     }
 
     // hier werden neue ViewHolder erstellt
-     fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+     fun onCreateViewHolder(parent: ViewGroup): ItemViewHolder {
         // das itemLayout wird gebaut
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.fragment_calender, parent, false)
