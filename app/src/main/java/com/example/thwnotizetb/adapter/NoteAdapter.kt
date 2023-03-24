@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ItemViewHolder>() {
         val thwLogo1 : ImageView = view.findViewById(R.id.blogo_iv)
         val id : TextView = view.findViewById(R.id.noteId_tv)
         val text : TextView = view.findViewById(R.id.notetext_tv)
+        val fabButton : Button = view.findViewById(R.id.fab_bt)
     }
 
     @SuppressLint("NotifyDataSetChanged")

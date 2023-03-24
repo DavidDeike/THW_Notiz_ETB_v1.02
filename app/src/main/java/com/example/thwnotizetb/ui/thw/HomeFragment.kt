@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
              findNavController().navigate(R.id.linkFragment)
         }
         binding.serviceBt.setOnClickListener {
-            findNavController().navigate(R.id.serviceFragment)
+            findNavController().navigate(HomeFragmentDirections.actionMenueFragmentToServiceFragment())
         }
     }
 
