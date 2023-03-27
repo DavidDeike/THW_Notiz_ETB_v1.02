@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "672429654653",
+    "project_id": "thw-app-f5794",
+    "storage_bucket": "thw-app-f5794.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672429654653:android:994ccac7117011a58fe714",
+        "android_client_info": {
+          "package_name": "com.example.thwnotizetb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672429654653-ecao5snjldn5a4hfp0jsra0vdgi5bi9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6borefF1LOcl2zFW5P5NWWtDSGG77FCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672429654653-ecao5snjldn5a4hfp0jsra0vdgi5bi9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

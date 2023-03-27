@@ -28,7 +28,7 @@ class NotizEtbFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.notizBt.setOnClickListener {
-            findNavController().navigate(NotizEtbFragmentDirections.actionNotizEtbFragmentToNoteListFragment())
+            findNavController().navigate(R.id.noteListFragment)
         }
         binding.etbBt.setOnClickListener {
             // findNavController().navigate(R.id.action_)

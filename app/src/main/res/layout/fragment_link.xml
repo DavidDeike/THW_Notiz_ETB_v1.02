@@ -59,7 +59,6 @@
             android:autoLink="web"
             android:fontFamily="@font/open_sans_bold"
             android:linksClickable="true"
-            android:onClick="https://www.thw.de"
             android:text="@string/bundesanstallt_techniches_hilfswerk"
             android:textColor="#003399"
             android:textSize="18sp"
@@ -70,7 +69,7 @@
             app:strokeColor="@color/black"
             app:strokeWidth="1dp"
             app:toggleCheckedStateOnClick="false"
-            tools:ignore="OnClick,VisualLintButtonSize" />
+            tools:ignore="VisualLintButtonSize,TextSizeCheck" />
 
         <Button
             android:id="@+id/link2_bt"

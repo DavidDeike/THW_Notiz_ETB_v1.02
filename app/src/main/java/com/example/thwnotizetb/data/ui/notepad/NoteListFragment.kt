@@ -5,39 +5,40 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.thwnotizetb.R
-import com.example.thwnotizetb.databinding.NoteListFragmentBinding
 
 class NoteListFragment : Fragment() {
 
-        private var _binding: NoteListFragmentBinding? = null
+    companion object {
+        fun newInstance() = NoteListFragment()
+    }
 
-        private val binding get() = _binding!!
+    private var _binding: NoteListFragment? = null
 
+    private val binding get() = _binding!!
 
-        private lateinit var viewModel: NoteViewModel
+    private lateinit var viewModel: NoteViewModel
 
-        override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            return inflater.inflate(R.layout.note_list_fragment, container, false)
-        }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.note_list_fragment, container, false)
+    }
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-            binding.nlHinzuBt.setOnClickListener {
+        /* .setOnClickListener {
                 findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToAddNoteFragment())
             }
            // binding.nlBearbeitBt.setOnClickListener {
            //     findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToNoteDetailFragment())
             //}
-        }
+        }*/
 
     }
-
+}
 
 
 

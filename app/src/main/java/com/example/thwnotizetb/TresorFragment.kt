@@ -5,12 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.thwnotizetb.databinding.FragmentTresorBinding
 import com.example.thwnotizetb.databinding.TresorItemBinding
 
 
 class TresorFragment : Fragment() {
 
-    private var _binding: TresorItemBinding? = null
+    private var _binding: FragmentTresorBinding? = null
 
     private val binding get() = _binding!!
 
@@ -18,8 +19,8 @@ class TresorFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = TresorItemBinding.inflate(inflater, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_tresor, container, false)
+        _binding = FragmentTresorBinding.inflate(inflater, container, false)
         return binding.root
     }
 
