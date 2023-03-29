@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.thwnotizetb.R
 
 class NoteListFragment : Fragment() {
@@ -22,23 +24,31 @@ class NoteListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.note_list_fragment, container, false)
-    }
+    ): View {
+        val view: View = inflater.inflate(R.layout.note_list_fragment, container,false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val Button1 = view.findViewById<Button>(R.id.nlHinzu_bt)
+        val Button2 = view.findViewById<Button>(R.id.nlBearbeit_bt)
 
-        /* .setOnClickListener {
-                findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToAddNoteFragment())
+           Button1.setOnClickListener {
+               findNavController().navigate(R.id.noteDetailFragment)
             }
-           // binding.nlBearbeitBt.setOnClickListener {
-           //     findNavController().navigate(NoteListFragmentDirections.actionNoteListFragmentToNoteDetailFragment())
-            //}
-        }*/
+            Button2.setOnClickListener {
+                findNavController().navigate(R.id.addNoteFragment)
+            }
 
+        return view
     }
+
 }
+
+
+
+
+
+
+
+
 
 
 

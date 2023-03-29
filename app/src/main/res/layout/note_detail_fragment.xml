@@ -10,8 +10,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="0dp"
         android:background="@color/reinwhite">
+
+        <ImageView
+            android:id="@+id/blogo_iv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/thw20"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <Button
             android:id="@+id/editNoteButton"
@@ -54,17 +64,16 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:ems="10"
             android:hint="@string/hallo_ich_bin_dein_notizhelfer"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/deleteNoteButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.325"
             tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

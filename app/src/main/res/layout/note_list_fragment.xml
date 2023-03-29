@@ -14,25 +14,18 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notesRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="412dp"
+            android:layout_height="438dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.054"
+            tools:ignore="TextSizeCheck"
             tools:listitem="@layout/note_item">
 
         </androidx.recyclerview.widget.RecyclerView>
-
-        <TextView
-            android:id="@+id/notesNotFound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Notes not found." />
 
         <ImageView
             android:id="@+id/blogo_iv"
@@ -50,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:backgroundTint="@color/Gelb"
+            android:backgroundTint="#80FFFF00"
             android:fontFamily="@font/open_sans_bold"
             android:text="Bearbeiten"
             android:textColor="@color/Ultramarinblau"
@@ -67,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:backgroundTint="@color/Gelb"
+            android:backgroundTint="#80FFFF00"
             android:fontFamily="@font/open_sans_bold"
             android:text="@string/hinzuf"
             android:textColor="@color/Ultramarinblau"
