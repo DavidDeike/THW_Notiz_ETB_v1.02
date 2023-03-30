@@ -49,7 +49,7 @@
                 android:id="@+id/entfernen_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 android:backgroundTint="@color/Gelb"
                 android:text="@string/entfernen"
                 android:textColor="@color/Ultramarinblau"
@@ -57,6 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/hinzuf_bt"
+                app:layout_constraintTop_toBottomOf="@+id/pWbeschreib_tv"
                 app:strokeColor="@color/black"
                 app:strokeWidth="1dp" />
 
@@ -64,7 +65,7 @@
                 android:id="@+id/hinzuf_bt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 android:backgroundTint="@color/Gelb"
                 android:text="@string/hinzuf_gen"
                 android:textColor="@color/Ultramarinblau"
@@ -72,6 +73,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/entfernen_bt"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pWbeschreib_tv"
                 app:strokeColor="@color/black"
                 app:strokeWidth="1dp" />
 
@@ -80,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="130dp"
+                android:layout_marginBottom="150dp"
                 android:ems="10"
                 android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/Beschreibung2"

@@ -14,8 +14,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notesRecyclerView"
-            android:layout_width="412dp"
-            android:layout_height="438dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="120dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -47,6 +48,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Bearbeiten"
             android:textColor="@color/Ultramarinblau"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
