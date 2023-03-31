@@ -52,7 +52,7 @@
 
         <Button
             android:id="@+id/cancel_bt"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:fontFamily="@font/lubalin2"
@@ -69,7 +69,7 @@
 
         <Button
             android:id="@+id/cDelete_bt"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:fontFamily="@font/lubalin2"

@@ -52,7 +52,7 @@
             android:layout_marginTop="249dp"
             android:layout_marginEnd="80dp"
             android:fontFamily="@font/open_sans_bold"
-            android:text="Notiz / ETB"
+            android:text="ETB"
             android:textColor="#003399"
             android:textSize="20sp"
             app:backgroundTint="#80FFFF00"
