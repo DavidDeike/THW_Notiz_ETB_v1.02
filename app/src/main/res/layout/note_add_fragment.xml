@@ -73,7 +73,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="Löschen"
             android:textColor="#003399"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:backgroundTint="#80FFFF00"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
             tools:ignore="HardcodedText,VisualLintButtonSize" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/addNote_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/hallo_ich_bin_dein_notizhelfer"
