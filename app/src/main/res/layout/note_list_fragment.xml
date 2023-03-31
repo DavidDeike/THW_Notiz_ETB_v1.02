@@ -40,24 +40,6 @@
             tools:ignore="ContentDescription" />
 
         <Button
-            android:id="@+id/nlBearbeit_bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:backgroundTint="#80FFFF00"
-            android:fontFamily="@font/open_sans_bold"
-            android:text="Bearbeiten"
-            android:textColor="@color/Ultramarinblau"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nlHinzu_bt"
-            app:strokeColor="@color/black"
-            app:strokeWidth="1dp"
-            tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
-
-        <Button
             android:id="@+id/nlHinzu_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,8 +49,7 @@
             android:text="@string/hinzuf"
             android:textColor="@color/Ultramarinblau"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nlBearbeit_bt"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:strokeColor="@color/black"
             app:strokeWidth="1dp" />

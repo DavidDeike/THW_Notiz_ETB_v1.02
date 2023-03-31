@@ -3,114 +3,83 @@ package com.example.thwnotizetb.data.ui.notepad
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.thwnotizetb.data.model.notepad.Note
+
 
 class NoteViewModel : ViewModel() {
 
-    private val status: MutableLiveData<Boolean>
-        get() = MutableLiveData<Boolean>()
+    private val _newNote: MutableLiveData<MutableList<Note>> = MutableLiveData(mutableListOf<Note>())
 
-    val observableStatus: LiveData<Boolean>
-    get() = status
+    val newNote: LiveData<MutableList<Note>>
+    get() = _newNote
 
-  /* fun addNote(noteText: String) {
-        status.value = try {
-            NotesManager.addNote(noteText)
-            true
-        } catch (e: IllegalArgumentException) {
-            false
+
+    fun addNote(text:String) {
+        val addNewNote = Note("Text")
+        _newNote.value?.add(0, Note(""))
+        _newNote.value = newNote.value
+    }
+
+/*
+ // Eine Instanz des Repository wird in einer Variablen gespeichert
+    private val repository = Repository()
+
+    // Die Liste aus Kontakten wird in einer verschachtelten Variable gespeichert
+    private val _contactList = MutableLiveData<List<Contact>>(repository.loadContacts())
+    val contactList: LiveData<List<Contact>>
+        get() = _contactList
+
+    // Die Liste an ChatNachrichten wird in einer verschachtelten Variable gespeichert
+    private val _chat = MutableLiveData<MutableList<Message>>(mutableListOf())
+    val chat: LiveData<MutableList<Message>>
+        get() = _chat
+
+    /**
+     * Diese Funktion initialisiert den Chat und setzt die Variablen dementsprechend
+     */
+    fun loadChat( Int) {
+        val contact = contactList.value?.find { it.id == id }
+
+        if (contact != null) {
+            _chat.value = contact.chatHistory
         }
     }
 
-    private val currentNote = MutableLiveData<Note>()
+    /**
+     * Diese Funktion "schickt die Draft Message ab",
+     * indem die Variablen dementsprechend gesetzt werden
+     */
+    fun sendMessage(text: String) {
+        val newMessage = Message(text, false)
+        _chat.value?.add(0, newMessage)
+        _chat.value = chat.value
 
-    private val deleteStatus = MutableLiveData<Boolean>()
-
-    val observableCurrentNote: LiveData<Note>
-        get() = currentNote
-
-    val observableDeleteStatus: LiveData<Boolean>
-        get() = deleteStatus
-
-    fun deleteNote(id: Int) {
-        deleteStatus.value = try {
-            NotesManager.deleteNote(id)
-            true
-        } catch (e: IllegalArgumentException) {
-            false
+        viewModelScope.launch {
+            delay(5000)
+            generateAnswer()
         }
     }
 
-    fun initNote(id: Int) {
-        currentNote.value = NotesManager.getNote(id)
-    }
+    /**
+     * BONUS
+     */
 
+    private fun generateAnswer() {
+        val random = (1..5).random()
 
-
-    private val editStatus = MutableLiveData<Boolean>()
-
-    val observableEditStatus: LiveData<Boolean>
-        get() = editStatus
-
-    fun editNote(id: Int, noteText: String) {
-        editStatus.value = try {
-            NotesManager.editNote(id, noteText)
-            true
-        } catch (e: IllegalArgumentException) {
-            false
+        val answer = when (random) {
+            1 -> "okay. tell me more ;)"
+            2 -> "leave me alone dude!!!"
+            3 -> "nice to hear that!\nHow are you?"
+            4 -> "haha"
+            5 -> "I totally get it ;)"
+            else -> ".."
         }
-    }
 
-    private val note = MutableLiveData<Note>()
+        val newMessage = Message(answer, true)
+        _chat.value?.add(0, newMessage)
 
-    val observableNote: LiveData<Note>
-        get() = note
+        _chat.value = chat.value
 
-    fun getNote(id: Int) {
-        note.value = NotesManager.getNote(id)
-    }
-
-    private val noteList = MutableLiveData<List<Note>>()
-
-    val observableNoteList: LiveData<List<Note>>
-        get() = noteList
-
-    init {
-        load()
-    }
-
-    fun load() {
-        noteList.value = NotesManager.getNoteList()
-    }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ */
 }

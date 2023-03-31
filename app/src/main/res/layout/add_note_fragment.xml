@@ -12,6 +12,56 @@
         android:layout_height="match_parent"
         android:background="@color/reinwhite">
 
+        <ImageView
+            android:id="@+id/blogo_iv4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/thw20"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        <Button
+            android:id="@+id/deleteNoteButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Löschen"
+            android:textColor="#003399"
+            app:backgroundTint="#80FFFF00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nlBearbeit_bt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#000000"
+            app:strokeWidth="1dp"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/nlBearbeit_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#80FFFF00"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Bearbeiten"
+            android:textColor="@color/Ultramarinblau"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/deleteNoteButton2"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +74,7 @@
                 android:id="@+id/addNoteText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lubalin"
+                android:fontFamily="@font/open_sans_semibold"
                 android:hint="@string/Dienst"
                 android:imeOptions="actionDone"
                 android:inputType="textAutoCorrect"

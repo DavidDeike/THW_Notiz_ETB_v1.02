@@ -14,12 +14,12 @@ import com.example.thwnotizetb.data.model.notepad.Note
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ItemViewHolder>() {
 
-    private var dataset = listOf<Note>()
+    private var dataset : List<Note>  = listOf()
 
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val pen : ImageView = view.findViewById(R.id.pen_iv)
-        val thwLogo1 : ImageView = view.findViewById(R.id.blogo_iv)
+        //val pen : ImageView = view.findViewById(R.id.pen_iv)
+        //val thwLogo1 : ImageView = view.findViewById(R.id.blogo_iv)
         val id : TextView = view.findViewById(R.id.noteId_tv)
         val text : TextView = view.findViewById(R.id.notetext_tv)
         val fabButton : Button = view.findViewById(R.id.nlHinzu_bt)
@@ -44,15 +44,11 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ItemViewHolder>() {
     // hier findet der Recyclingprozess statt
     // die vom ViewHolder bereitgestellten Parameter werden verändert
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        dataset[position]
+       val Note = dataset[position]
 
-       /*holder.image.load(rec.image) {
-            transformations(CircleCropTransformation())
-        }*/
-
-        holder.id.text = dataset[position].id.toString()
         holder.text.text = dataset[position].text
-
+        holder.
+        if (/**/>0)
 
 
     }

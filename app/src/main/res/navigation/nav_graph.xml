@@ -24,7 +24,14 @@
         android:id="@+id/addNoteFragment"
         android:name="com.example.thwnotizetb.data.ui.notepad.AddNoteFragment"
         android:label="@string/label_add_note"
-        tools:layout="@layout/add_note_fragment" />
+        tools:layout="@layout/add_note_fragment" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_noteDetailFragment"
+            app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/action_addNoteFragment_to_deleteNoteFragment"
+            app:destination="@id/deleteNoteFragment" />
+    </fragment>
     <fragment
         android:id="@+id/deleteNoteFragment"
         android:name="com.example.thwnotizetb.data.ui.notepad.DeleteNoteFragment"
@@ -115,5 +122,8 @@
         <action
             android:id="@+id/action_noteListFragment_to_noteDetailFragment"
             app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/action_noteListFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
     </fragment>
 </navigation>

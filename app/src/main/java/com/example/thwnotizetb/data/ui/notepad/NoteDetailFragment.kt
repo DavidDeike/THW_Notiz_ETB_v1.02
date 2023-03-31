@@ -41,6 +41,7 @@ class NoteDetailFragment : Fragment() {
         button3b.setOnClickListener {
             findNavController().navigate(R.id.noteListFragment)
         }
+
         return view
     }
 
