@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.thwnotizetb.R
@@ -13,7 +14,7 @@ class DeleteNoteFragment : Fragment(){
 
     private lateinit var _binding: DeleteNoteFragment
 
-    //private val binding get() = _binding
+    private val binding get() = _binding
 
     private lateinit var viewModel: NoteViewModel
 
@@ -28,9 +29,11 @@ class DeleteNoteFragment : Fragment(){
 
         button1.setOnClickListener {
             findNavController().navigate(R.id.noteListFragment)
+            Toast.makeText(context, "Abgebrochen", Toast.LENGTH_SHORT).show()
         }
         button2.setOnClickListener {
              findNavController().navigate(R.id.noteListFragment)
+            Toast.makeText(context, "Entgültigt gelöscht", Toast.LENGTH_SHORT).show()
          }
 
         return view
