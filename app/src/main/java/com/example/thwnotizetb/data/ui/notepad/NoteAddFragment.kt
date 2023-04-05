@@ -43,7 +43,8 @@ class NoteAddFragment : Fragment() {
             findNavController().navigate(R.id.deleteNoteFragment)
         }
         button3b.setOnClickListener {
-            viewModel.addNote(Note(""))
+            val note = Note(binding.addNoteTv.text.toString())
+            viewModel.addNote(note)
             findNavController().navigate(R.id.noteListFragment)
             Toast.makeText(context, "Erfolgreich gespeichert", Toast.LENGTH_SHORT).show()
         }

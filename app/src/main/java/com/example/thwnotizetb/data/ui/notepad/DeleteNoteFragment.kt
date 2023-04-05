@@ -1,28 +1,37 @@
 package com.example.thwnotizetb.data.ui.notepad
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.thwnotizetb.R
+import com.example.thwnotizetb.data.model.notepad.Note
+import com.example.thwnotizetb.databinding.DeleteNoteFragmentBinding
 
-class DeleteNoteFragment : Fragment(){
+
+
+class DeleteNoteFragment : Fragment() {
+
+    private val viewModel: NoteViewModel by activityViewModels()
 
     private lateinit var _binding: DeleteNoteFragment
 
     private val binding get() = _binding
 
-    private lateinit var viewModel: NoteViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view: View = inflater.inflate(R.layout.delete_note_fragment, container,false)
+        _binding = DeleteNoteFragmentBinding.inflate(inflater)
+        val view = binding.root
 
         val button1 = view.findViewById<Button>(R.id.cancel_bt)
         val button2 = view.findViewById<Button>(R.id.cDelete_bt)
@@ -32,14 +41,19 @@ class DeleteNoteFragment : Fragment(){
             Toast.makeText(context, "Abgebrochen", Toast.LENGTH_SHORT).show()
         }
         button2.setOnClickListener {
-             findNavController().navigate(R.id.noteListFragment)
+            val delNote = Note(binding.)
+            viewModel.delNote(index = 0)
+            findNavController().navigate(R.id.deleteNoteFragment)
             Toast.makeText(context, "Entgültigt gelöscht", Toast.LENGTH_SHORT).show()
-         }
+        }
 
         return view
     }
 
-
-
+    override fun onDestroy() {
+        super.onDestroy()
+        val delNote = context?.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        delNote.hideSoftInputFromWindow(view?.windowToken, 0)
+    }
 
 }

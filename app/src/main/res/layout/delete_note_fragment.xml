@@ -36,20 +36,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Note id" />
 
-        <TextView
-            android:id="@+id/notetext_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/open_sans_semibold"
-            android:text="@string/note_detail_text"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/noteId_tv"
-            tools:text="Note text" />
-
         <Button
             android:id="@+id/cancel_bt"
             android:layout_width="wrap_content"
@@ -82,6 +68,24 @@
             app:strokeColor="#000000"
             app:strokeWidth="1dp"
             tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        <EditText
+            android:id="@+id/todel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/Dienst"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteId_tv"
+            tools:ignore="VisualLintTextFieldSize"
+            android:autofillHints="" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

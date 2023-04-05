@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_noteAddFragment_to_noteListFragment"
             app:destination="@id/noteListFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
 
     </fragment>
     <fragment
@@ -28,6 +31,9 @@
         <action
             android:id="@+id/action_deleteNoteFragment_to_noteListFragment2"
             app:destination="@id/noteListFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -110,5 +116,8 @@
         <action
             android:id="@+id/action_noteListFragment_to_noteAddFragment"
             app:destination="@id/noteAddFragment" />
+        <action
+            android:id="@+id/action_noteListFragment_to_deleteNoteFragment"
+            app:destination="@id/deleteNoteFragment" />
     </fragment>
 </navigation>

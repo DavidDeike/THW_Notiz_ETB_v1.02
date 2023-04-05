@@ -23,7 +23,7 @@
 
         <TextView
             android:id="@+id/notetext_tv"
-            android:layout_width="343dp"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
             android:background="@color/reinwhite"
             android:padding="10dp"
@@ -32,12 +32,21 @@
 
         <ImageView
             android:id="@+id/pen_iv"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:background="@color/reinwhite"
             app:srcCompat="@android:drawable/ic_menu_edit"
             tools:ignore="ContentDescription,ImageContrastCheck,InefficientWeight" />
+
+        <ImageView
+            android:id="@+id/del_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/reinwhite"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
     </LinearLayout>
 </layout>

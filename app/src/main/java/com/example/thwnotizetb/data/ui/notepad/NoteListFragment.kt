@@ -1,5 +1,6 @@
 package com.example.thwnotizetb.data.ui.notepad
 
+import NoteAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import com.example.thwnotizetb.R
@@ -37,10 +39,13 @@ class NoteListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val adapter = NoteAdapter()
+        binding.notesRecyclerView.adapter = adapter
+        viewModel.notes.observe(viewLifecycleOwner, Observer {
+            adapter.submitList(it)
+        })
 
         binding.nlHinzuBt.setOnClickListener {
-            val newNote = Note("")
-            viewModel.addNote(newNote)
             viewModel.currentNum = 0
             it.findNavController().navigate(R.id.action_noteListFragment_to_noteAddFragment)
         }

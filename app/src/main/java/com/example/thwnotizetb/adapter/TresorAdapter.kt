@@ -14,7 +14,7 @@ import com.example.thwnotizetb.R
 class TresorAdapter {
 
 
-   // private var dataset = listOf<Tresor>()
+   private var dataset = listOf<Tresor>()
 
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -26,9 +26,9 @@ class TresorAdapter {
         val passWort: TextView = view.findViewById(R.id.pW_Pw_tv)
     }
 
-   /* @SuppressLint("NotifyDataSetChanged")
+    @SuppressLint("NotifyDataSetChanged")
     fun submitList(TresorList: List<Tresor>) {
-        BankList.also { dataset = it }
+        treList.also { dataset = it }
     }
 
     // hier werden neue ViewHolder erstellt
@@ -60,5 +60,5 @@ class TresorAdapter {
     // damit der LayoutManager weiß wie lang die Liste ist
     override fun getItemCount(): Int {
         return dataset.size
-    }*/
+    }
 }
