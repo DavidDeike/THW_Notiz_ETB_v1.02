@@ -47,11 +47,11 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ItemViewHolder>() {
 
         holder.pen.setOnClickListener{
             val navController = holder.itemView.findNavController()
-            navController.navigate(NoteListFragmentDirections.actionNoteListFragmentToNoteAddFragment())
+            navController.navigate(R.id.action_noteListFragment_to_noteAddFragment)
         }
         holder.bin.setOnClickListener{
             val navController = holder.itemView.findNavController()
-            navController.navigate(NoteListFragmentDirections.a)
+            navController.navigate(R.id.deleteNoteFragment)
         }
 
     }

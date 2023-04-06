@@ -41,8 +41,7 @@ class DeleteNoteFragment : Fragment() {
             Toast.makeText(context, "Abgebrochen", Toast.LENGTH_SHORT).show()
         }
         button2.setOnClickListener {
-            val delNote = Note(binding.)
-            viewModel.delNote(index = 0)
+            viewModel.delNote()
             findNavController().navigate(R.id.deleteNoteFragment)
             Toast.makeText(context, "Entgültigt gelöscht", Toast.LENGTH_SHORT).show()
         }

@@ -4,7 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class TresorRepository(private val tresorDao: TresorDao) {
-
+/*
     suspend fun getTresorList(): List<Tresor> {
         return withContext(Dispatchers.IO) {
             tresorDao.getAllTresors()
@@ -21,5 +21,5 @@ class TresorRepository(private val tresorDao: TresorDao) {
         withContext(Dispatchers.IO) {
             tresorDao.deleteTresor(tresor)
         }
-    }
+    }*/
 }

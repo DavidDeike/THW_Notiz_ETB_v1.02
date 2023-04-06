@@ -4,7 +4,7 @@ import androidx.room.*
 
 @Dao
 interface TresorDao {
-
+/*
     @Query("SELECT * FROM Tresor")
     suspend fun getAllTresors(): List<Tresor>
 
@@ -12,5 +12,5 @@ interface TresorDao {
     suspend fun insertTresor(tresor: Tresor)
 
     @Delete
-    suspend fun deleteTresor(tresor: Tresor)
+    suspend fun deleteTresor(tresor: Tresor)*/
 }

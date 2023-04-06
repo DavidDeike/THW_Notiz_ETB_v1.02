@@ -8,7 +8,7 @@ import com.example.thwnotizetb.data.TresorRepository
 import kotlinx.coroutines.launch
 
 class TresorViewModel(private val tresorRepository: TresorRepository) : ViewModel() {
-
+/*
         private val _tresorList = MutableLiveData<List<Tresor>>()
         val tresorList: LiveData<List<Tresor>> = _tresorList
 
@@ -30,7 +30,7 @@ class TresorViewModel(private val tresorRepository: TresorRepository) : ViewMode
                 tresorRepository.removeTresor(tresor)
                 loadTresorList()
             }
-        }
+        }*/
     }
 
 

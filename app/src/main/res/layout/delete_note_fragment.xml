@@ -76,6 +76,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="8dp"
+            android:autofillHints=""
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/Dienst"
@@ -84,8 +85,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/noteId_tv"
-            tools:ignore="VisualLintTextFieldSize"
-            android:autofillHints="" />
+            tools:ignore="VisualLintTextFieldSize" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

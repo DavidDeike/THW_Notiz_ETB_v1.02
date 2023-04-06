@@ -12,7 +12,7 @@ import com.example.thwnotizetb.R
 
 
 class TresorAdapter {
-
+/*
 
    private var dataset = listOf<Tresor>()
 
@@ -26,7 +26,7 @@ class TresorAdapter {
         val passWort: TextView = view.findViewById(R.id.pW_Pw_tv)
     }
 
-    @SuppressLint("NotifyDataSetChanged")
+
     fun submitList(TresorList: List<Tresor>) {
         treList.also { dataset = it }
     }
@@ -60,5 +60,5 @@ class TresorAdapter {
     // damit der LayoutManager weiß wie lang die Liste ist
     override fun getItemCount(): Int {
         return dataset.size
-    }
+    }*/
 }
