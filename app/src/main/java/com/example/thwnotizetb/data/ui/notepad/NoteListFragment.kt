@@ -19,34 +19,30 @@ class NoteListFragment : Fragment() {
 
     private val viewModel: NoteViewModel by activityViewModels()
 
-    private lateinit var _binding: NoteListFragmentBinding
-
-    private val binding get() = _binding
-
-
+    private lateinit var binding: NoteListFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-       _binding = NoteListFragmentBinding.inflate(inflater)
-
-
-        //return inflater.inflate(R.layout.note_list)
-        return _binding.root
+        binding = NoteListFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val adapter = NoteAdapter()
         binding.notesRecyclerView.adapter = adapter
-        viewModel.notes.observe(viewLifecycleOwner, Observer {
+
+        viewModel.notes.observe(viewLifecycleOwner) {
             adapter.submitList(it)
-        })
+        }
 
         binding.nlHinzuBt.setOnClickListener {
             viewModel.currentNum = 0
+            val note = Note("")
+            viewModel.addNote(note)
             it.findNavController().navigate(R.id.action_noteListFragment_to_noteAddFragment)
         }
     }

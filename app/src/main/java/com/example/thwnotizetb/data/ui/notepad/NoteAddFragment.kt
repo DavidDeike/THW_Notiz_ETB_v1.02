@@ -10,8 +10,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.thwnotizetb.R
-import com.example.thwnotizetb.data.model.notepad.Note
 import com.example.thwnotizetb.databinding.NoteAddFragmentBinding
 
 
@@ -19,37 +17,30 @@ class NoteAddFragment : Fragment() {
 
     private val viewModel: NoteViewModel by activityViewModels()
 
-    private lateinit var _binding: NoteAddFragmentBinding
-
-    private val binding get() = _binding
-
+    private lateinit var binding: NoteAddFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = NoteAddFragmentBinding.inflate(inflater)
-        val view = binding.root
+        binding = NoteAddFragmentBinding.inflate(inflater, container, false)
 
+        val index = requireArguments().getInt("index")
+        val note = viewModel.notes.value?.get(index)
 
-        val button1b = binding.editNoteButton
-        val button2b = binding.deleteNoteButton
-        val button3b = binding.editNoteButton2
+        binding.addNoteTv.setText(note?.text)
 
-        button1b.setOnClickListener {
-            findNavController().navigate(R.id.noteListFragment)
-        }
-        button2b.setOnClickListener {
-            findNavController().navigate(R.id.deleteNoteFragment)
-        }
-        button3b.setOnClickListener {
-            val note = Note(binding.addNoteTv.text.toString())
-            viewModel.addNote(note)
-            findNavController().navigate(R.id.noteListFragment)
-            Toast.makeText(context, "Erfolgreich gespeichert", Toast.LENGTH_SHORT).show()
+        binding.editNoteButton2.setOnClickListener {
+            val newText = binding.addNoteTv.text.toString()
+            if (newText.isNotEmpty()) {
+                viewModel.updateNoteAt(index, newText)
+                findNavController().navigateUp()
+            } else {
+                Toast.makeText(requireContext(), "Erfolgreich Gespeichert", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        return view
+        return binding.root
     }
 
     override fun onDestroy() {
@@ -57,9 +48,5 @@ class NoteAddFragment : Fragment() {
         val addNote = context?.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         addNote.hideSoftInputFromWindow(view?.windowToken, 0)
     }
-
-
-
-
 }
 

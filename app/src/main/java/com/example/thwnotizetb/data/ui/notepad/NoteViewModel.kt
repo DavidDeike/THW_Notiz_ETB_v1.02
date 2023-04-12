@@ -1,33 +1,48 @@
 package com.example.thwnotizetb.data.ui.notepad
 
-import androidx.lifecycle.LiveData
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.RecyclerView
-import com.example.thwnotizetb.R
 import com.example.thwnotizetb.data.model.notepad.Note
 
 
 class NoteViewModel : ViewModel() {
 
-    var currentNum : Int = 0
+    var currentNum: Int = 0
 
-    private val _notes: MutableLiveData<MutableList<Note>> = MutableLiveData(mutableListOf<Note>())
+    private val _notes: MutableLiveData<MutableList<Note>> = MutableLiveData(mutableListOf())
 
-    val notes: LiveData<MutableList<Note>>
-    get() = _notes
-
+    val notes: MutableLiveData<MutableList<Note>>
+        get() = _notes
 
     fun addNote(note: Note) {
-       //val addNewNote = note("Text")
-        _notes.value?.add(0 , note)
-        _notes.value = notes.value
+        val notesList = _notes.value.orEmpty().toMutableList()
+        notesList.add(0, note)
+        _notes.value = notesList
     }
 
-    fun delNote(index: Int){
-        _notes.value?.removeAt(index)
-        _notes.value = notes.value
+    fun deleteNoteAt(index: Int) {
+        val notesList = _notes.value.orEmpty().toMutableList()
+        if (index in notesList.indices) {
+            notesList.removeAt(index)
+            _notes.value = notesList
+        }
     }
 
+    fun updateNoteAt(index: Int, newText: String) {
+        val notesList = _notes.value.orEmpty().toMutableList()
+        if (index in notesList.indices) {
+            notesList[index].text = newText
+            _notes.value = notesList
+        }
+    }
 
+    fun deleteCurrentNote() {
+        val notesList = _notes.value.orEmpty().toMutableList()
+        if (currentNum in notesList.indices) {
+            notesList.removeAt(currentNum)
+            _notes.value = notesList
+        }
+    }
 }
+

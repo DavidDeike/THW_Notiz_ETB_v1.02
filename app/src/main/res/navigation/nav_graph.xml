@@ -115,7 +115,11 @@
         tools:layout="@layout/note_list_fragment">
         <action
             android:id="@+id/action_noteListFragment_to_noteAddFragment"
-            app:destination="@id/noteAddFragment" />
+            app:destination="@id/noteAddFragment" >
+            <argument
+                android:name="index"
+                android:defaultValue="0" />
+        </action>
         <action
             android:id="@+id/action_noteListFragment_to_deleteNoteFragment"
             app:destination="@id/deleteNoteFragment" />
